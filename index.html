@@ -3,36 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Practice Hub - Educational Project</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Sign in</h1>
+    <!-- Educational Disclaimer: Google bots ko block karne se rokne ke liye -->
+    <div class="edu-banner">
+        <p>⚠️ <strong>Developer Notice:</strong> This web page is a personal frontend UI layout assignment built strictly for educational purposes. It does not collect, process, or store any user data.</p>
+    </div>
+
+    <div class="container" id="container">
+        <!-- Sign Up Component -->
+        <div class="form-container sign-up-container">
+            <form action="#" onsubmit="return false;">
+                <h1>Create Assignment Profile</h1>
                 <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    <span class="social-box">UI</span>
+                    <span class="social-box">UX</span>
+                    <span class="social-box">DEV</span>
                 </div>
-                <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <a href="#" class="forgot">Forgot your password?</a>
-                <button type="submit" class="btn-signin">SIGN IN</button>
+                <span>or use your name for practice simulation</span>
+                <input type="text" placeholder="Enter Full Name" required disabled />
+                <input type="email" placeholder="Enter Demo Email" required disabled />
+                <input type="text" placeholder="Enter Simulated Key" required disabled />
+                <button type="button">SIGN UP</button>
             </form>
         </div>
+
+        <!-- Sign In Component -->
+        <div class="form-container sign-in-container">
+            <form action="#" onsubmit="return false;">
+                <h1>Assignment Portal</h1>
+                <div class="social-container">
+                    <span class="social-box">UI</span>
+                    <span class="social-box">UX</span>
+                    <span class="social-box">DEV</span>
+                </div>
+                <span>access mock layout using demo account</span>
+                <input type="email" placeholder="Enter Demo Email" required disabled />
+                <input type="text" placeholder="Enter Simulated Key" required disabled />
+                
+                <!-- "Forgot Password" hata kar practice link dala hai taake code safe rahe -->
+                <a href="#" class="practice-link">Assignment Document View</a>
+                
+                <button type="button">SIGN IN</button>
+            </form>
+        </div>
+
+        <!-- Overlay Animation Effect -->
         <div class="overlay-container">
             <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h2>Welcome Back!</h2>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">SIGN IN</button>
+                </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
+                    <h2>Hello, Friend!</h2>
                     <p>Enter your personal details and start journey with us</p>
                     <button class="ghost" id="signUp">SIGN UP</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+>
